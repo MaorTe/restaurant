@@ -15,7 +15,8 @@ import { Navbar } from './components';
 import './App.css';
 
 const App = () => (
-	<div style={{ backgroundColor: 'black' }}>
+	// <div style={{ backgroundColor: 'black' }}>
+	<div>
 		<Navbar />
 		<Header />
 		<AboutUs />
