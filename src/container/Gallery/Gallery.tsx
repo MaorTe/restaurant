@@ -13,11 +13,23 @@ const Gallery = () => {
    const scroll = (direction: string) => {
       const { current } = scrollRef;
       if (direction === 'left') {
-         // eslint-disable-next-line
          current!.scrollLeft -= 300;
       } else {
-         // eslint-disable-next-line
          current!.scrollLeft += 300;
+      }
+   };
+
+   const galleryImageCards = (): JSX.Element[] => {
+      {
+         return galleryImages.map((image, index) => (
+            <div
+               className="app__gallery-images_card flex__center"
+               key={`gallery_image-${index + 1}`}
+            >
+               <img src={image} alt="gallery_image" />
+               <BsInstagram className="gallery__image-icon" />
+            </div>
+         ));
       }
    };
 
@@ -37,15 +49,7 @@ const Gallery = () => {
 
          <div className="app__gallery-images">
             <div className="app__gallery-images_container" ref={scrollRef}>
-               {galleryImages.map((image, index) => (
-                  <div
-                     className="app__gallery-images_card flex__center"
-                     key={`gallery_image-${index + 1}`}
-                  >
-                     <img src={image} alt="gallery_image" />
-                     <BsInstagram className="gallery__image-icon" />
-                  </div>
-               ))}
+               {galleryImageCards()}
             </div>
 
             <div className="app__gallery-images_arrows">
