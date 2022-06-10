@@ -10,6 +10,7 @@
 	--color-crimson: #f5efdb;
 	--color-grey: #aaaaaa;
 	--color-white: #ffffff;
+	background: var(--color-black);
 }
 
 * {
@@ -72,4 +73,11 @@ a {
 }
 ::-webkit-scrollbar-thumb:window-inactive {
 	background: rgba(174, 194, 204, 0.4);
+}
+
+@media screen and (max-width: 650px) {
+	:root {
+		background: var(--color-black);
+		z-index: -5;
+	}
 }
