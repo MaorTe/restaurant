@@ -8,7 +8,7 @@ const Intro = () => {
    const [playVideo, setPlayVideo] = React.useState(false);
    const vidRef = React.useRef<HTMLVideoElement>(null);
 
-   //TS function
+   //TS function type
    const handleVideo = (): void => {
       setPlayVideo((prevPlayVideo) => !prevPlayVideo);
 
