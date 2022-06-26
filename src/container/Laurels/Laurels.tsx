@@ -23,6 +23,7 @@ const AwardCard: React.FC<IProps> = ({ award: { imgUrl, title, subtitle } }) => 
       </div>
    </div>
 );
+
 const Laurels = () => {
    return (
       <div className="app__bg app__wrapper section__padding" id="awards">
