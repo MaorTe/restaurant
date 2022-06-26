@@ -8,7 +8,7 @@ const Intro = () => {
    const [playVideo, setPlayVideo] = React.useState(false);
    const vidRef = React.useRef<HTMLVideoElement>(null);
 
-   const handleVideo = () => {
+   const handleVideo = (): void => {
       setPlayVideo((prevPlayVideo) => !prevPlayVideo);
 
       if (playVideo) {
@@ -17,6 +17,7 @@ const Intro = () => {
          vidRef.current?.play();
       }
    };
+
    return (
       <div className="app__video">
          <video ref={vidRef} loop controls={false} muted>
